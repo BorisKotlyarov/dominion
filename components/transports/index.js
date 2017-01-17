@@ -25,7 +25,7 @@ class HttpRequest {
             }
 
             let options = {
-                host    : urlInformation.host,
+                host    : urlInformation.host.replace(/:\d{2,5}/i, ''),
                 port    : urlInformation.port,
                 path    : urlInformation.path,
                 method  : method,
